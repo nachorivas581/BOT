@@ -1,20 +1,56 @@
 #! /bin/bash
 
+
+#PRUEBA
+ABOUTME=`curl -s "https://api.telegram.org/bot2037980112:AAGx5MQlBYS-FWSVBqvPjSd-dX0R9Unr1y8/getUpdates"`
+if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
+        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
+                MYUSERNAME=${BASH_REMATCH[1]}
+                
+        fi
+
+        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
+                MYFIRSTNAME=${BASH_REMATCH[1]}
+                
+        fi
+
+        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
+                
+                BOTID=${BASH_REMATCH[1]};
+        fi
+
+else
+        echo "Error: maybe wrong token... exit.";
+        exit;
+fi
+
+
+
+
 #COMANDOS
 
 
 key="$(cd /var/www/html/VPS-MOD ; ls | wc -l)"
 status="$(systemctl is-active apache2)"
-
+ID="$BOTID"
+Usuario=@"$MYUSERNAME"
+Nombre="$MYFIRSTNAME"
 
 (echo "
-======🚫 Suscripcion Premium (Tiempo Limite)=========
-Status Generador [VPS-MOD]: [$status]
- | Keys Generadas [$key]
- ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+Bienvenido ! "$Nombre"
+
+Tu Usuario:"$Usuario"
+
+Tu ID: "$ID"
+
+===== Suscripcion Premium (Tiempo Limite)=========
+   Status Generador [VPS-MOD]: [$status]
+Keys Generadas [$key]
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 /infosys ❈ INFORMACION DEL SERVIDOR |
 /id ❈ Muestra tu ID
 /instal ❈ INSTALADOR OFICIAL |
 /keygen ❈ Generar Keys [VPS-MOD] |
+/onkey ❈ Encender/Apagar Generador         [$status] |
 /exit ❈ Salir del Bot |
- ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
