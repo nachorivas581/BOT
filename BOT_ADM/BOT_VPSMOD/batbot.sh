@@ -35,6 +35,7 @@ botcommands=(
         ["/start"]="start"
         ["/exit"]="exit"
         ["/on-off"]="on/off"
+	["/vpsmod"]="keygen"
 )
 # + end config
 # +
