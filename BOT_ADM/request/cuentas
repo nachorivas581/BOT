@@ -8,11 +8,11 @@ echo "<h2>Usuario invalido !</h2>"
 exit
 fi
 
-limite=$(cat /etc/users.txt | wc -l)
+limite=$(cat /etc/usuarios | wc -l)
 
-if [ "$limite" -gt "30" ]
+if [ "$limite" -gt "15" ]
 then
-echo "<h1>Limite de Cuentas Excedido!</h1>"
+echo "Limite de Cuentas Excedido!"
 exit 0
 fi
 
@@ -25,7 +25,7 @@ sudo useradd -M -s /bin/false $1 -e $validade
 
 (echo $2 ; echo $2) | passwd $1
 
-echo "$1 : $2  IP: $3" >> /etc/users.txt
+echo "$1 : $2  IP: $ip" >> /etc/usuarios
 
 echo            "☣☣☣☣☣[VPS-MOD]☣☣☣☣☣☣☣"
 echo "----------------------------------"
