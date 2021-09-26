@@ -87,6 +87,7 @@ echo "$1 : $2  IP: $ip" >> /etc/usuarios
 echo            "☣☣☣☣☣[VPS-MOD]☣☣☣☣☣☣☣"
 echo "----------------------------------"
 echo "✔Cuenta Creada Con Exito!✔"
+echo "Hora de Creacion" :$(printf '%(%H:%M:%S)T')
 echo "☢Usuario: $1☢"
 echo "☢Contraseña: $2☢"
 echo "IP: $ip"
