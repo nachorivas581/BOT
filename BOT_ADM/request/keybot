@@ -1,0 +1,40 @@
+#! /bin/bash
+
+key="$(cd /var/www/html/VPS-MOD ; ls | wc -l)"
+
+case $key in
+
+0)keygen
+;;
+1)keygen
+;;
+2)keygen
+;;
+3)keygen
+;;
+4)keygen
+;;
+5)keygen
+;;
+6)keygen
+;;
+7)keygen
+;;
+8)keygen
+;;
+9)keygen
+;;
+10)keygen
+;;
+11*)
+(echo "
+       🔑🔑🔑 GENERADOR KEYS [VPS-MOD]🔑🔑🔑
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+  🔒❌ Key no Generada ❌🔒
+   Hora:$(printf '%(%H:%M:%S)T')
+ ⚠️ Espera el reinicio de Keys en 24 Horas e intentalo nuevamente ⚠️
+    🔑  Keys Generadas: [$key]🔑
+         🔓Keys Ilimitadas🔓 ---> Contacto:@Nachoeivas
+ ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
+;;
+esac
