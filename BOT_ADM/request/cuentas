@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Nexuser
+
+if [ "$1" = "root" ]
+then
+echo "<h2>Usuario invalido !</h2>"
+exit
+fi
+
+limite=$(cat /etc/users.txt | wc -l)
+
+if [ "$limite" -gt "30" ]
+then
+echo "<h1>Limite de Cuentas Excedido!</h1>"
+exit 0
+fi
+
+#CONFIGURACIONES:
+ip="$(wget -qO- ifconfig.co/ip)"
+validade=$(date '+%C%y/%m/%d' -d " +2 days")
+validadebr=$(date '+%d/%m/%C%y' -d " +2 days")
+
+sudo useradd -M -s /bin/false $1 -e $validade
+
+(echo $2 ; echo $2) | passwd $1
+
+echo "$1 : $2  IP: $3" >> /etc/users.txt
+
+echo            "☣☣☣☣☣[VPS-MOD]☣☣☣☣☣☣☣"
+echo "----------------------------------"
+echo "✔Cuenta Creada Con Exito!✔"
+echo "☢Usuario: $1☢"
+echo "☢Contraseña: $2☢"
+echo "IP: $ip"
+echo "Puertos Activos: 8080 python , 444 Dropbear"
+echo "❌Vencimiento: $validadebr❌"
+echo "----------------------------------"
