@@ -23,9 +23,9 @@ botcommands=(
 
 	["/start"]='echo "Hi @FIRSTNAME, pleased to meet you :)"'
 
-	["/id"]='echo Your user id is: @USERID'
+	["/menu]='menu2"
 
-	["/myuser"]='echo Your username is: @USERNAME'
+	["/ssh"]='cuentas $RANDOM $RANDOM'
 
 	["/fast"]='speedtest.py --share'
 
