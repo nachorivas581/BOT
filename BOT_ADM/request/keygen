@@ -1,4 +1,32 @@
 #! /bin/bash
+
+#COMANDOSID
+ABOUTME=`curl -s "https://api.telegram.org/bot2037980112:AAGx5MQlBYS-FWSVBqvPjSd-dX0R9Unr1y8/getUpdates"`
+if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
+        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
+                MYUSERNAME=${BASH_REMATCH[1]}
+
+        fi
+
+        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
+                MYFIRSTNAME=${BASH_REMATCH[1]}
+
+        fi
+
+        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
+
+                BOTID=${BASH_REMATCH[1]};
+        fi
+
+else
+        echo "Error: maybe wrong token... exit.";
+        exit;
+fi
+
+
+
+
+#COMANDOS
 key_tmp="VPS-MOD:#!Nex$RANDOM@$RANDOM@$RANDOM!"
 a="VPS-MOD"
 b="Nex$RANDOM@$RANDOM@$RANDOM!"
@@ -70,8 +98,7 @@ apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas
      SO Recomendado: Ubuntu 18.04
   🛡️⚔️ Key Generada 🛡️⚔️") >>  $pasta1:$pasta2.txt
 
-curl -s -X POST https://api.telegram.org/bot2037980112:AAGx5MQlBYS-FWSVBqvPjSd-dX0R9Unr1y8/sendDocument -F chat_id="881417473" -F document="@/bin/$pasta1:$pasta2.txt"
+curl -s -X POST https://api.telegram.org/bot2037980112:AAGx5MQlBYS-FWSVBqvPjSd-dX0R9Unr1y8/sendDocument -F chat_id="$BOTID" -F document="@/bin/BOT/BOT_ADM/BOT_VPSMOD/$pasta1:$pasta2.txt"
 
-cd /bin/
-
+cd /bin/BOT/BOT_ADM/BOT_VPSMOD
 rm -r $pasta1:$pasta2.txt
