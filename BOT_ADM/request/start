@@ -35,22 +35,24 @@ status="$(systemctl is-active apache2)"
 ID="$BOTID"
 Usuario=@"$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
+SSH="$(grep -c ".*" /etc/usuarios)"
 
 (echo "
-Bienvenido ! "$Nombre"
+𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! "$Nombre"
 
 Tu Usuario:"$Usuario"
 
 Tu ID: "$ID"
 
-===== Suscripcion Premium (Tiempo Limite)=========
-   Status Generador [VPS-MOD]: [$status]
-Keys Generadas [$key]
-••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+======🚫 Tus comandos Disponibles=========
+Status Generador [VPS-MOD]: [$status]
+ Keys Generadas [$key]
+ SSH Generadas [$SSH]
+ ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 /infosys ❈ INFORMACION DEL SERVIDOR |
-/id ❈ Muestra tu ID
 /instal ❈ INSTALADOR OFICIAL |
 /keygen ❈ Generar Keys [VPS-MOD] |
-/onkey ❈ Encender/Apagar Generador         [$status] |
+/ssh    ❈ Generar Cuenta SSH [VPS-MOD] |
+/fast  ❈ Ver Velocidad del Servidor [VPS-MOD] |
 /exit ❈ Salir del Bot |
-••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
+ ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
