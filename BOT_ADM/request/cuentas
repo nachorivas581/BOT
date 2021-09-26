@@ -19,7 +19,7 @@ for((i=0; i<=${#portas[@]}; i++)); do
 servico="$(echo ${portas[$i]}|cut -d' ' -f1)"
 porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
 [[ -z $servico ]] && break
-texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+texto="${servico}: ${porta}"
      while [[ ${#texto} -lt 35 ]]; do
         texto=$texto" "
      done
@@ -31,7 +31,7 @@ porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
    echo -e " "
    break
    }
-texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+texto="${servico}:${porta}"
      while [[ ${#texto} -lt 35 ]]; do
         texto=$texto" "
      done
@@ -43,7 +43,7 @@ porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
    echo -e " "
    break
    }
-texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+texto="${servico}:${porta}"
      while [[ ${#texto} -lt 35 ]]; do
         texto=$texto" "
      done
@@ -58,6 +58,7 @@ done
 
 
 # Nexuser
+SSH="$(grep -c ".*" /etc/usuarios)"
 
 if [ "$1" = "root" ]
 then
@@ -67,7 +68,7 @@ fi
 
 limite=$(cat /etc/usuarios | wc -l)
 
-if [ "$limite" -gt "20" ]
+if [ "$limite" -gt "41" ]
 then
 echo "Limite de Cuentas Excedido!"
 exit 0
@@ -86,8 +87,9 @@ echo "$1 : $2  IP: $ip" >> /etc/usuarios
 
 echo            "☣☣☣☣☣[VPS-MOD]☣☣☣☣☣☣☣"
 echo "----------------------------------"
+echo "Cuentas creadas:  [$SSH]"
 echo "✔Cuenta Creada Con Exito!✔"
-echo "Hora de Creacion" :$(printf '%(%H:%M:%S)T')
+echo "Hora de Creacion": $(printf '%(%H:%M:%S)T')
 echo "☢Usuario: $1☢"
 echo "☢Contraseña: $2☢"
 echo "IP: $ip"
