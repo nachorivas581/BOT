@@ -30,7 +30,7 @@ botcommands=(
 	["/ping ([a-zA-Z0-9]+)"]='echo Pong: @R1'
 
 	["/uptime"]="uptime"
-        ["/keygen"]="keygen"
+        ["/keygen"]="keybot"
         ["/infosys"]="infosys ; sleep 1 && start"
         ["/start"]="start"
         ["/exit"]="exit"
