@@ -27,7 +27,7 @@ botcommands=(
 
 	["/myuser"]='echo Your username is: @USERNAME'
 
-	["/ping ([a-zA-Z0-9]+)"]='echo Pong: @R1'
+	["/fast"]='speedtest.py --share'
 
 	["/uptime"]="uptime"
         ["/keygen"]="keybot"
