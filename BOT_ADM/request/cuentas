@@ -69,7 +69,7 @@ limite=$(cat /etc/usuarios | wc -l)
 
 if [ "$limite" -gt "20" ]
 then
-echo "<h1>Limite de Cuentas Excedido!</h1>"
+echo "Limite de Cuentas Excedido!"
 exit 0
 fi
 
