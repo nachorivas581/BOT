@@ -21,13 +21,13 @@ CHECKNEWMSG=2;
 declare -A botcommands
 botcommands=(
 
-	[""]='echo "Hi @FIRSTNAME, pleased to meet you :)"'
+	[""]='echo "Hi @FIRSTNAME, pleased to meet you :)"
 
-	["/menu]='menu2"
+	["/menu]="menu2"
 
-	["/ssh"]='cuentas $RANDOM $RANDOM'
+	["/ssh"]="cuentas $RANDOM $RANDOM"
 
-	["/fast"]='speedtest.py --share'
+	["/fast"]="speedtest.py --share"
 
 	["/uptime"]="uptime"
         ["/keygen"]="keybot"
