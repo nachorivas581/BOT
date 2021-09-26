@@ -1,5 +1,62 @@
 #!/bin/bash
 
+
+#COMANDOS
+
+
+mine_port () {
+unset portas
+portas_var=$(lsof -V -i tcp -P -n | grep -v "ESTABLISHED" |grep -v "COMMAND" | grep "LISTEN")
+i=0
+while read port; do
+var1=$(echo $port | awk '{print $1}') && var2=$(echo $port | awk '{print $9}' | awk -F ":" '{print $2}')
+[[ "$(echo -e ${portas[@]}|grep "$var1 $var2")" ]] || {
+    portas[$i]="$var1 $var2"
+    let i++
+    }
+done <<< "$portas_var"
+for((i=0; i<=${#portas[@]}; i++)); do
+servico="$(echo ${portas[$i]}|cut -d' ' -f1)"
+porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
+[[ -z $servico ]] && break
+texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+     while [[ ${#texto} -lt 35 ]]; do
+        texto=$texto" "
+     done
+echo -ne "${texto}"
+let i++
+servico="$(echo ${portas[$i]}|cut -d' ' -f1)"
+porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
+[[ -z $servico ]] && {
+   echo -e " "
+   break
+   }
+texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+     while [[ ${#texto} -lt 35 ]]; do
+        texto=$texto" "
+     done
+echo -ne "${texto}"
+let i++
+servico="$(echo ${portas[$i]}|cut -d' ' -f1)"
+porta="$(echo ${portas[$i]}|cut -d' ' -f2)"
+[[ -z $servico ]] && {
+   echo -e " "
+   break
+   }
+texto="\033[1;31m ${servico}: \033[1;32m${porta}"
+     while [[ ${#texto} -lt 35 ]]; do
+        texto=$texto" "
+     done
+echo -e "${texto}"
+done
+}
+
+
+
+
+
+
+
 # Nexuser
 
 if [ "$1" = "root" ]
@@ -10,9 +67,9 @@ fi
 
 limite=$(cat /etc/usuarios | wc -l)
 
-if [ "$limite" -gt "15" ]
+if [ "$limite" -gt "20" ]
 then
-echo "Limite de Cuentas Excedido!"
+echo "<h1>Limite de Cuentas Excedido!</h1>"
 exit 0
 fi
 
@@ -33,6 +90,7 @@ echo "✔Cuenta Creada Con Exito!✔"
 echo "☢Usuario: $1☢"
 echo "☢Contraseña: $2☢"
 echo "IP: $ip"
-echo "Puertos Activos: 8080 python , 444 Dropbear"
+echo "Puertos Activos:"
+mine_port
 echo "❌Vencimiento: $validadebr❌"
 echo "----------------------------------"
