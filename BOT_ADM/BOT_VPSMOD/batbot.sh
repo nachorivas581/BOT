@@ -25,7 +25,7 @@ botcommands=(
 
 	["/menu]="menu2"
 
-	["/ssh"]="cuentas $RANDOM $RANDOM"
+	["/ssh"]="crear"
 
 	["/fast"]="speedtest.py --share"
 
