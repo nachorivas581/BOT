@@ -21,7 +21,7 @@ CHECKNEWMSG=2;
 declare -A botcommands
 botcommands=(
 
-	[""]='echo "Hi @FIRSTNAME, pleased to meet you :)"
+	["/hi"]='echo "Hi @FIRSTNAME, pleased to meet you :)"'
 
 	["/menu]="menu2"
 
