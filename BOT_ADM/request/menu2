@@ -33,16 +33,16 @@ fi
 key="$(cd /var/www/html/VPS-MOD ; ls | wc -l)"
 status="$(systemctl is-active apache2)"
 ID="$BOTID"
-Usuario=@"$MYUSERNAME"
+Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 SSH="$(grep -c ".*" /etc/usuarios)"
 
 (echo "
-𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! "$Nombre"
+𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
 
-Tu Usuario:"$Usuario"
+Tu Usuario: @$Usuario
 
-Tu ID: "$ID"
+Tu ID: $ID
 
 ======🚫 Tus comandos Disponibles=========
 Status Generador [VPS-MOD]: [$status]
