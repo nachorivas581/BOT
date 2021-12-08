@@ -5,7 +5,9 @@ VERSION="1.5.0"
 
 # default token and chatid
 # or run BaTbot with option: -t <token>
-TELEGRAMTOKEN="-YOUR-BOT-TOKEN-HERE-";
+TELEGRAMTOKEN="-YOUR-BOT-TOKEN-HERE-";[InternetShortcut]
+URL=https://github.com/nachorivas581/BOT/blob/main/BOT_ADM/BOT_VPSMOD/batbot.sh
+
 
 # how many seconds between check for new messages
 # or run Batbot with option: -c <seconds>
@@ -21,7 +23,7 @@ CHECKNEWMSG=2;
 declare -A botcommands
 botcommands=(
 
-	["/menu]="menu2"
+	["/menu"]="menu2"
 
 	["/ssh"]="crear"
 
