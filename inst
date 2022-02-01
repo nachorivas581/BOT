@@ -1,0 +1,33 @@
+#!/bin/bash
+git clone https://github.com/nachorivas581/BOT.git
+sleep 1 
+cd bin/BOT/BOT_ADM/request
+cp infosys /bin
+cp start /bin
+cp keygen /bin
+cp on-off /bin
+cp instal /bin
+cp keybot /bin
+cp botrun /bin
+cp cuentas /bin
+cp menu2 /bin
+cp crear /bin
+sleep 1
+cd /bin
+chmod +x infosys 
+chmod +x start 
+chmod +x keygen 
+chmod +x on-off 
+chmod +x instal
+chmod +x keybot
+chmod +x botrun
+chmod +x menu2
+chmod +x cuentas
+chmod +x crear
+cd /usr/bin
+https://raw.githubusercontent.com/nachorivas581/BOT/main/BOT_ADM/request/speedtest.py
+chmod +x speedtest.py
+cowsay -f eyes " VPSMOD Nexuser" | lolcat
+figlet ..Completado.. | lolcat
+sleep 2
+echo -e "\n\033[1;32mTIPEA menu PARA INICIAR\033[1;32m"
