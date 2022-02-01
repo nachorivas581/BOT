@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /bin
 git clone https://github.com/nachorivas581/BOT.git
 sleep 1 
 cd bin/BOT/BOT_ADM/request
