@@ -111,7 +111,7 @@ echo "🔑 Contraseña: $2"
 echo "⏱ Vencimiento: $validadebr❌"
 echo "----------------------------------"
 echo "👉IP: $ip"
-echo"-----------------------------------"
+echo "-----------------------------------"
 echo "Puertos Activos:"
 mine_port
 echo UDP-STATUS : $a
