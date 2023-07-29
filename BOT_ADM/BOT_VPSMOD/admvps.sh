@@ -22,20 +22,15 @@ CHECKNEWMSG=2;
 
 declare -A botcommands
 botcommands=(
-
-	["/menu"]="menuvps"
-
-	["/ssh"]="crear"
-
-	["/fast"]="speedtest.py --share"
-
-	["/uptime"]="uptime"
-        ["/keygen"]="keybot"
-        ["/infosys"]="infosys ; sleep 1 && start"
         ["/start"]="start"
-        ["/exit"]="exit"
-        ["/on-off"]="on/off"
-	["/vpsmod"]="keygen"
+	["/menu"]="menuvps"
+	["/fast"]="speedtest.py --share"
+	["/onudp"]="upudp"
+        ["/offudp"]="offudp"
+        ["/onpsi"]="on"
+        ["/datpsi"]="config"
+        ["/ssh"]="crear"
+        ["/infssh"]="cat /etc/usuarios"
 )
 # + end config
 # +
