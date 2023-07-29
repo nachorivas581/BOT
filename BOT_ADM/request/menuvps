@@ -2,7 +2,7 @@
 
 
 #PRUEBA
-ABOUTME=`curl -s "https://api.telegram.org/bot5105366194:AAEz4JEMuaqWdhF1_TezgYn1dez4bCZSuzU/getUpdates"`
+ABOUTME=`curl -s "https://api.telegram.org/bot(token)/getUpdates"`
 if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
         if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
                 MYUSERNAME=${BASH_REMATCH[1]}
