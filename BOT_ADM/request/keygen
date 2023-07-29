@@ -59,7 +59,7 @@ cp /home/list /var/www/html/$pasta1/$pasta2/list
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
   🛡️  INSTALADOR OFICIAL !
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas581/Nexuser/main/inst; chmod 777 inst; ./inst
+apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas581/Nexuser/main/inst; chmod 777 inst; ./inst --start
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
   Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04
      SO Recomendado: Ubuntu 18.04
@@ -92,7 +92,7 @@ apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
   🛡️  INSTALADOR OFICIAL !
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas581/Nexuser/main/inst; chmod 777 inst; ./inst
+apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas581/Nexuser/main/inst; chmod 777 inst; ./inst --start
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
   Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04
      SO Recomendado: Ubuntu 18.04
