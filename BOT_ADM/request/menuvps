@@ -2,7 +2,7 @@
 
 
 #PRUEBA
-ABOUTME=`curl -s "https://api.telegram.org/bot(token)/getUpdates"`
+ABOUTME=`curl -s "https://api.telegram.org/bot5105366194:AAEz4JEMuaqWdhF1_TezgYn1dez4bCZSuzU/getUpdates"`
 if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
         if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
                 MYUSERNAME=${BASH_REMATCH[1]}
@@ -44,6 +44,18 @@ on="[ON]" && off="[OFF]"
 echo "BADVPN:" "$badvpn"|lolcat
 
 }
+psiphond()
+{
+a="$(systemctl is-active psiphond)"
+
+case $a  in
+
+active) echo  "PSIPHON-STATUS:[ON]"|lolcat
+;;
+inactive)echo "PSIPHON-STATUS:[OFF]"|lolcat
+;;
+esac
+}
 
 
 
@@ -56,6 +68,7 @@ Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 udp="$(udp)"
 statusbadvpn="$(statusbadvpn)"
+psiphond="$(psiphond)"
 (echo "
 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
 
@@ -67,6 +80,8 @@ Tu ID: $ID
  👤 SSH Generadas [$SSH]
  👉$udp
  👉$statusbadvpn
+ 👉$psiphond
+
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 ✅|/onudp| ❈ Activar UDP [VPS-MOD] |
 💥|/offudp| ❈ Apagar UDP [VPS-MOD] |
