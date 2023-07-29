@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Escribe el TOKEN de tu BOT:"
+
+read TOKEN
+case $TOKEN in
+
+*)   echo "PORFAVOR COLOCA TU TOKEN EN LOS ARCHIVOS REQUERIDOS "; nano /bin/menuvps; cd /bin/BOT/BOT_ADM/BOT_VPSMOD ; nohup bash admvps.sh -t $TOKEN -c 0>2&1 && exit
+
+;;
+esac
+
