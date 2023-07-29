@@ -1,0 +1,9 @@
+cp /root/psi/server-entry.dat /var/www/html
+chmod +x /var/www/html/server-entry.dat
+chmod -R  755 /var/www
+ip="$(curl ifconfig.me)"
+sleep 2;
+sleep 3;
+clear
+cat /root/psi/server-entry.dat
+echo " INGRESA AL  LINK Y COPIA LA CONFIGURACION!:'http://$ip:81/server-entry.dat'"
