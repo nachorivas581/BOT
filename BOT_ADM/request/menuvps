@@ -1,0 +1,67 @@
+#! /bin/bash
+
+
+#PRUEBA
+ABOUTME=`curl -s "https://api.telegram.org/bot(token)/getUpdates"`
+if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
+        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
+                MYUSERNAME=${BASH_REMATCH[1]}
+
+        fi
+
+        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
+                MYFIRSTNAME=${BASH_REMATCH[1]}
+
+        fi
+
+        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
+
+                BOTID=${BASH_REMATCH[1]};
+        fi
+
+else
+        echo "Error: maybe wrong token... exit.";
+        exit;
+fi
+
+udp()
+{
+a="$(systemctl is-active udp-custom)"
+
+case $a  in
+
+active) echo  "[ON]"|lolcat
+;;
+inactive)echo "[OFF]"|lolcat
+;;
+esac
+}
+
+
+#COMANDOS
+
+SSH="$(grep -c ".*" /etc/usuarios)"
+status="$(systemctl is-active apache2)"
+ID="$BOTID"
+Usuario="$MYUSERNAME"
+Nombre="$MYFIRSTNAME"
+udp="$(udp)"
+(echo "
+𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
+
+Tu Usuario: @$Usuario
+
+Tu ID: $ID
+
+======🚫 Tus comandos Disponibles [VPS-MOD]=========
+Status Generador [VPS-MOD]: [$status]
+ SSH Generadas [$SSH]
+ UDP-STATUS   $udp
+ ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+/onudp ❈ Activar UDP [VPS-MOD] |
+/offudp ❈ Apagar UDP [VPS-MOD] |
+/onpsi ❈ Activar Psiphon [VPS-MOD] |
+/datpsi ❈Datos Psiphon  [VPS-MOD] |
+/ssh  ❈ Crear Cuenta SSH[VPS-MOD] |
+/exit ❈ Salir del Bot |
+ ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
