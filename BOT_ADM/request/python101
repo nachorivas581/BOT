@@ -250,5 +250,7 @@ if __name__ == '__main__':
 PYTHON
 ) > $HOME/proxy.log &
 echo -e "$BARRA"
-echo "Proxy Iniciado Con Exito"
-echo "Escuchando 0.0.0.0:80 ..."
+echo "💣💣[VPS-MOD]-[Python]💣💣"
+echo ""
+echo ""
+echo "Proxy Python Iniciado Con Exito!✅"
