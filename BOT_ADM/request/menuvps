@@ -71,8 +71,11 @@ Status Generador [VPS-MOD]: [$status]
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 /onudp ❈ Activar UDP [VPS-MOD] |
 /offudp ❈ Apagar UDP [VPS-MOD] |
+/onbad  ❈Activar BADVPN  [VPS-MOD] |
+/offbad  ❈Apagar BADVPN  [VPS-MOD] |
 /onpsi ❈ Activar Psiphon [VPS-MOD] |
 /datpsi ❈Datos Psiphon  [VPS-MOD] |
 /ssh  ❈ Crear Cuenta SSH[VPS-MOD] |
+/logssh  ❈Ver Cuentas SSH  [VPS-MOD] |
 /exit ❈ Salir del Bot |
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
