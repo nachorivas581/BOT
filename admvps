@@ -8,6 +8,7 @@ cp admrun /bin ;
 cp cuentas /bin ;
 cp menu2 /bin ;
 cp crear /bin ;
+cp bad /bin ;
 cd /bin ;
 wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/offudp ;
 wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/upudp ;
@@ -17,6 +18,7 @@ wget https://raw.githubusercontent.com/nachorivas581/BOT/main/BOT_ADM/request/me
 sleep 1 ;
 cd /bin ;
 chmod +x botrun ;
+chmod+x bad
 chmod +x menu2 ;
 chmod +x cuentas ;
 chmod +x crear ;
