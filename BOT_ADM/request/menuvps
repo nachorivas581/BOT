@@ -39,9 +39,9 @@ esac
 
 statusbadvpn()
 {
-on="\033[1;32m[ON]" && off="\033[1;31m[OFF]"
+on="[ON]" && off="[OFF]"
 [[ $(ps x | grep badvpn | grep -v grep | awk '{print $1}') ]] && badvpn=$on || badvpn=$off
-echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"|lolcat
+echo "BADVPN:" "$badvpn"|lolcat
 
 }
 
@@ -55,7 +55,7 @@ ID="$BOTID"
 Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 udp="$(udp)"
-statusbadvpn="$(statusbadvpn)
+statusbadvpn="$(statusbadvpn)"
 (echo "
 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
 
@@ -64,10 +64,9 @@ Tu Usuario: @$Usuario
 Tu ID: $ID
 
 ======🚫 Tus comandos Disponibles [VPS-MOD]=========
-Status Generador [VPS-MOD]: [$status]
- SSH Generadas [$SSH]
- $udp
- $statusbadvpn
+ 👤 SSH Generadas [$SSH]
+ 👉$udp
+ 👉$statusbadvpn
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 /onudp ❈ Activar UDP [VPS-MOD] |
 /offudp ❈ Apagar UDP [VPS-MOD] |
