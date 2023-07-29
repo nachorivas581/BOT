@@ -9,7 +9,8 @@ cp cuentas /bin ;
 cp menu2 /bin ;
 cp crear /bin ;
 cp bad /bin ;
-cp offbad /bin :
+cp offbad /bin ;
+cp python101 /bin ;
 cd /bin ;
 wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/offudp ;
 wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/upudp ;
@@ -30,6 +31,7 @@ chmod +x config ;
 chmod +x menuvps ;
 chmod +x admrun ;
 chmod +x offbad ;
+chmod +x python101 ;
 cd /usr/bin ;
 https://raw.githubusercontent.com/nachorivas581/BOT/main/BOT_ADM/request/speedtest.py ;
 chmod +x speedtest.py ;
