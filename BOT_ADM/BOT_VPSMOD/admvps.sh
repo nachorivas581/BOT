@@ -28,6 +28,7 @@ botcommands=(
 	["/onudp"]="upudp"
         ["/offudp"]="offudp"
 	["/onbad"]="bad"
+        ["/offbad"]="offbad"
         ["/datpsi"]="config"
         ["/ssh"]="crear"
         ["/infssh"]="cat /etc/usuarios"
