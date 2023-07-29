@@ -30,12 +30,21 @@ a="$(systemctl is-active udp-custom)"
 
 case $a  in
 
-active) echo  "[ON]"|lolcat
+active) echo  "UDP-STATUS:[ON]"|lolcat
 ;;
-inactive)echo "[OFF]"|lolcat
+inactive)echo "UDP-STATUS:[OFF]"|lolcat
 ;;
 esac
 }
+
+statusbadvpn()
+{
+on="\033[1;32m[ON]" && off="\033[1;31m[OFF]"
+[[ $(ps x | grep badvpn | grep -v grep | awk '{print $1}') ]] && badvpn=$on || badvpn=$off
+echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"|lolcat
+
+}
+
 
 
 #COMANDOS
@@ -46,6 +55,7 @@ ID="$BOTID"
 Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 udp="$(udp)"
+statusbadvpn="$(statusbadvpn)
 (echo "
 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
 
@@ -56,7 +66,8 @@ Tu ID: $ID
 ======🚫 Tus comandos Disponibles [VPS-MOD]=========
 Status Generador [VPS-MOD]: [$status]
  SSH Generadas [$SSH]
- UDP-STATUS   $udp
+ $udp
+ $statusbadvpn
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 /onudp ❈ Activar UDP [VPS-MOD] |
 /offudp ❈ Apagar UDP [VPS-MOD] |
