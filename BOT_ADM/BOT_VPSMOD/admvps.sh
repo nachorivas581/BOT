@@ -30,6 +30,7 @@ botcommands=(
 	["/onbad"]="bad"
         ["/offbad"]="offbad"
 	["/python101"]="python101"
+        ["/off101"]="off101"
         ["/onpsi"]="on"
 	["/offpsi"]="offpsi"
         ["/datpsi"]="datconf"
