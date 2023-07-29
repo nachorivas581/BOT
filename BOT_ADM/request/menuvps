@@ -68,13 +68,14 @@ Tu ID: $ID
  👉$udp
  👉$statusbadvpn
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-/onudp ❈ Activar UDP [VPS-MOD] |
-/offudp ❈ Apagar UDP [VPS-MOD] |
-/onbad  ❈Activar BADVPN  [VPS-MOD] |
-/offbad  ❈Apagar BADVPN  [VPS-MOD] |
-/onpsi ❈ Activar Psiphon [VPS-MOD] |
-/datpsi ❈Datos Psiphon  [VPS-MOD] |
-/ssh  ❈ Crear Cuenta SSH[VPS-MOD] |
-/infssh ❈Ver Cuentas SSH  [VPS-MOD] |
-/fast ❈ Ver Velocidad del Servidor [VPS-MOD] |
+|/onudp| ❈ Activar UDP [VPS-MOD] |
+|/offudp| ❈ Apagar UDP [VPS-MOD] |
+|/onbad | ❈Activar BADVPN  [VPS-MOD] |
+|/offbad|❈Apagar BADVPN  [VPS-MOD] |
+|/python101| ❈Activar Python(Response 101)  [VPS-MOD] |
+|/onpsi| ❈ Activar Psiphon [VPS-MOD] |
+|/datpsi| ❈Datos Psiphon  [VPS-MOD] |
+|/ssh|  ❈ Crear Cuenta SSH[VPS-MOD] |
+|/infssh| ❈Ver Cuentas SSH  [VPS-MOD] |
+|/fast| ❈ Ver Velocidad del Servidor [VPS-MOD] |
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••")
