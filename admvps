@@ -1,0 +1,32 @@
+#!/bin/bash
+cd /bin ;
+git clone https://github.com/nachorivas581/BOT.git ;
+sleep 1 ;
+cd BOT/BOT_ADM/request ;
+cp start /bin ;
+cp botrun /bin ;
+cp cuentas /bin ;
+cp menu2 /bin ;
+cp crear /bin ;
+cd /bin ;
+wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/offudp ;
+wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/upudp ;
+wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/on ;
+wget https://raw.githubusercontent.com/nachorivas581/INS/main/adm-lite/config ;
+sleep 1 ;
+cd /bin ;
+chmod +x botrun ;
+chmod +x menu2 ;
+chmod +x cuentas ;
+chmod +x crear ;
+chmod +x offudp ;
+chmod +x upudp ;
+chmod +x on ;
+chmod +x config ;
+cd /usr/bin ;
+https://raw.githubusercontent.com/nachorivas581/BOT/main/BOT_ADM/request/speedtest.py ;
+chmod +x speedtest.py ;
+cowsay -f eyes " VPSMOD Nexuser" | lolcat ;
+figlet ..Completado.. | lolcat ;
+sleep 1 ;
+echo -e "\n\033[1;32mTIPEA menu PARA INICIAR\033[1;32m"
