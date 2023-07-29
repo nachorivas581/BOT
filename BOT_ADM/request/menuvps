@@ -46,13 +46,13 @@ echo "BADVPN:" "$badvpn"|lolcat
 }
 psiphond()
 {
-a="$(systemctl is-active psiphond)"
+a="$(ps -p 452159 -o comm=)"
 
 case $a  in
 
-active) echo  "PSIPHON-STATUS:[ON]"|lolcat
+psiphond) echo  "PSIPHON-STATUS:[ON]"|lolcat
 ;;
-inactive)echo "PSIPHON-STATUS:[OFF]"|lolcat
+*)echo "PSIPHON : NO ACTIVO O PID INCORRECTO (PORFAVOR VERIFICA EN TU VPS)"|lolcat
 ;;
 esac
 }
