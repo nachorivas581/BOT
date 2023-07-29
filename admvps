@@ -31,4 +31,4 @@ chmod +x speedtest.py ;
 cowsay -f eyes " VPSMOD Nexuser" | lolcat ;
 figlet ..Completado.. | lolcat ;
 sleep 1 ;
-echo -e "\n\033[1;32mTIPEA menu PARA INICIAR\033[1;32m"
+echo -e "\n\033[1;32mTIPEA botrun PARA INICIAR  el BOT\033[1;32m"
