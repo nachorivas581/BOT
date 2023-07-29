@@ -30,6 +30,7 @@ botcommands=(
 	["/onbad"]="bad"
         ["/offbad"]="offbad"
 	["/python101"]="python101"
+        ["/onpsi"]="on"
         ["/datpsi"]="datconf"
         ["/ssh"]="crear"
         ["/infssh"]="cat /etc/usuarios"
