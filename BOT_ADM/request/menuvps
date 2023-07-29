@@ -104,7 +104,6 @@ Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 udp="$(udp)"
 statusbadvpn="$(statusbadvpn)"
-psiphond="$(psiphond)"
 mine_port="$(mine_port)"
 (echo "
 𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
@@ -113,7 +112,7 @@ Tu Usuario: @$Usuario
 
 Tu ID: $ID
 
-======🚫 Tus comandos Disponibles [VPS-MOD]=========
+======🚫 Tus comandos Disponibles [VPS-MOD]🚫=========
  👤 SSH Generadas [$SSH]
  👉$udp
  👉$statusbadvpn
