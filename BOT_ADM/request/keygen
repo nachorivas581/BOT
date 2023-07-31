@@ -1,31 +1,3 @@
-#! /bin/bash
-
-#COMANDOSID
-ABOUTME=`curl -s "https://api.telegram.org/bot/getUpdates"`
-if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
-        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
-                MYUSERNAME=${BASH_REMATCH[1]}
-
-        fi
-
-        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
-                MYFIRSTNAME=${BASH_REMATCH[1]}
-
-        fi
-
-        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
-
-                BOTID=${BASH_REMATCH[1]};
-        fi
-
-else
-        echo "Error: maybe wrong token... exit.";
-        exit;
-fi
-
-
-
-
 #COMANDOS
 key_tmp="VPS-MOD:#!Nex$RANDOM@$RANDOM@$RANDOM!"
 a="VPS-MOD"
