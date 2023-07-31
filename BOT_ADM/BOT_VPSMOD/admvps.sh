@@ -23,6 +23,7 @@ CHECKNEWMSG=2;
 declare -A botcommands
 botcommands=(
         ["/start"]="start"
+	["/key"]="keygen"
 	["/menu"]="menuvps"
 	["/fast"]="speedtest.py --share"
 	["/onudp"]="upudp"
