@@ -21,7 +21,7 @@ cp /home/list /var/www/html/$pasta1/$pasta2/list
    Hora:$(printf '%(%H:%M:%S)T')
  ⚠️ Autodestruccion en 24 Horas ⚠️
     🔑  Keys Generadas: [$key]🔑
-     Contacto: @Nachoeivas
+     Contacto: @Nachorivasc
  ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
    ⚠️ Script    [VPS-MOD] ⚠️
   🛡️ KEY OFICIAL 🛡️ : Nexuser Creador
@@ -36,7 +36,10 @@ apt update -y; apt upgrade -y; wget https://raw.githubusercontent.com/nachorivas
   Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04
      SO Recomendado: Ubuntu 18.04
 Fotos del Script: https://github.com/nachorivas581/BOT/blob/main/BOT_ADM/request/2.png?raw=true
-  🛡️⚔️ Key Generada 🛡️⚔️")
+  🛡️⚔️ Key Generada 🛡️⚔️
+
+ 🔧🔧🔧🔧🔧ADQUIERE TU BOT-ADM 🔧🔧🔧🔧🔧🔧
+      💥💥💥Contacto @Nachorivasc💥💥💥      ")
 
 
 
