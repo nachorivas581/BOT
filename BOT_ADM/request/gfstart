@@ -1,1 +1,2 @@
-/root/gf_server/server start
+cd /root/gf_server/
+./server start
