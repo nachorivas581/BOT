@@ -4,11 +4,11 @@ git clone https://github.com/nachorivas581/BOT.git ;
 sleep 1 ;
 cd BOT/BOT_ADM/request ;
 cp botrun /bin ;
-cp infosys /bin ;
 cp gfmenu /bin ;
-cp start /bin ;
-cp keygen /bin ;
-cp on-off /bin ;
+cp gfstart /bin ;
+cp gfstop /bin ;
+cp gfrest /bin ;
+cp gfclear /bin ;
 cd /bin ;
 chmod 777 *;
 echo "Instalacion completa!"
