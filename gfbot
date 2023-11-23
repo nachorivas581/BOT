@@ -10,6 +10,11 @@ cp gfstop /bin ;
 cp gfrest /bin ;
 cp gfclear /bin ;
 cd /bin ;
-chmod 777 *;
+chmod 777 gfclear;
+chmod 777 gfcstart;
+chmod 777 gfstop;
+chmod 777 gfrest;
+chmod 777 botrun;
+chmod 777 gfmenu;
 echo "Instalacion completa!"
 echo "Ejecuta botrun!"
