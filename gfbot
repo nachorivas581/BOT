@@ -1,0 +1,14 @@
+#!/bin/bash
+cd /bin ;
+git clone https://github.com/nachorivas581/BOT.git ;
+sleep 1 ;
+cd BOT/BOT_ADM/request ;
+cp botrun /bin ;
+cp infosys /bin ;
+cp start /bin ;
+cp keygen /bin ;
+cp on-off /bin ;
+cd /bin ;
+chmod 777 *;
+echo "Instalacion completa!"
+echo "Ejecuta botrun!"
