@@ -1,1 +1,2 @@
-/root/gf_server/server restart
+cd /root/gf_server/
+./server restart
