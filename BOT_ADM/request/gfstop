@@ -1,1 +1,2 @@
-/root/gf_server/server stop
+cd /root/gf_server/
+./server stop
