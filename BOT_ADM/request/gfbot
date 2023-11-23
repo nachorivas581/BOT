@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Escribe el TOKEN de tu BOT:"
+
+read TOKEN
+case $TOKEN in
+
+*)  cd /bin/BOT/BOT_ADM/BOT_VPSMOD ; nohup bash gfbot.sh -t $TOKEN -c 0>2&1 && exit
+
+;;
+esac
