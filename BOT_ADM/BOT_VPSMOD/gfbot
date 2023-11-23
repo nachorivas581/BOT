@@ -6,7 +6,7 @@ VERSION="1.5.0"
 # default token and chatid
 # or run BaTbot with option: -t <token>
 TELEGRAMTOKEN="-YOUR-BOT-TOKEN-HERE-";[InternetShortcut]
-URL=https://github.com/nachorivas581/BOT/blob/main/BOT_ADM/BOT_VPSMOD/batbot.sh
+URL=https://github.com/nachorivas581/BOT/blob/main/BOT_ADM/BOT_VPSMOD/gfbot.sh
 
 
 # how many seconds between check for new messages
