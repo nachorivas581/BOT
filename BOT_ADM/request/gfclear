@@ -1,1 +1,2 @@
-/root/gf_server/server clear
+cd /root/gf_server
+./server clear
