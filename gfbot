@@ -3,18 +3,18 @@ cd /bin ;
 git clone https://github.com/nachorivas581/BOT.git ;
 sleep 1 ;
 cd BOT/BOT_ADM/request ;
-cp botrun /bin ;
 cp gfmenu /bin ;
 cp gfstart /bin ;
 cp gfstop /bin ;
 cp gfrest /bin ;
 cp gfclear /bin ;
+cp gfbot /bin ;
 cd /bin ;
 chmod 777 gfclear;
 chmod 777 gfcstart;
 chmod 777 gfstop;
 chmod 777 gfrest;
-chmod 777 botrun;
+chmod 777 gfbot;
 chmod 777 gfmenu;
 echo "Instalacion completa!"
 echo "Ejecuta botrun!"
