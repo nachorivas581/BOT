@@ -1,32 +1,4 @@
 #! /bin/bash
-
-
-#PRUEBA
-ABOUTME=`curl -s "https://api.telegram.org/bot/getUpdates"`
-if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
-        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
-                MYUSERNAME=${BASH_REMATCH[1]}
-                
-        fi
-
-        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
-                MYFIRSTNAME=${BASH_REMATCH[1]}
-                
-        fi
-
-        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
-                
-                BOTID=${BASH_REMATCH[1]};
-        fi
-
-else
-        echo "Error: maybe wrong token... exit.";
-        exit;
-fi
-
-
-
-
 #COMANDOS
 
 
@@ -38,12 +10,7 @@ Nombre="$MYFIRSTNAME"
 SSH="$(grep -c ".*" /etc/usuarios)"
 
 (echo "
-𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
-
-Tu Usuario: @$Usuario
-
-Tu ID: $ID
-
+𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! 
 ======🚫 Tus comandos Disponibles=========
 Status Generador [VPS-MOD]: [$status]
  Keys Generadas [$key]
