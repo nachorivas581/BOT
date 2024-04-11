@@ -1,29 +1,4 @@
 #! /bin/bash
-
-
-#PRUEBA
-ABOUTME=`curl -s "https://api.telegram.org/bot(token)/getUpdates"`
-if [[ "$ABOUTME" =~ \"ok\"\:true\, ]]; then
-        if [[ "$ABOUTME" =~ \"username\"\:\"([^\"]+)\" ]]; then
-                MYUSERNAME=${BASH_REMATCH[1]}
-
-        fi
-
-        if [[ "$ABOUTME" =~ \"first_name\"\:\"([^\"]+)\" ]]; then
-                MYFIRSTNAME=${BASH_REMATCH[1]}
-
-        fi
-
-        if [[ "$ABOUTME" =~ \"id\"\:([0-9\-]+), ]]; then
-
-                BOTID=${BASH_REMATCH[1]};
-        fi
-
-else
-        echo "Error: maybe wrong token... exit.";
-        exit;
-fi
-
 udp()
 {
 a="$(systemctl is-active udp-custom)"
@@ -36,6 +11,23 @@ inactive)echo "UDP-STATUS:[OFF]"|lolcat
 ;;
 esac
 }
+
+hys()
+{
+a="$(systemctl is-active hysteria-server)"
+
+case $a  in
+
+active) echo  "Hysteria:[ON]"|lolcat
+;;
+inactive)echo "Hysteria:[OFF]"|lolcat
+;;
+esac
+}
+
+
+
+
 
 statusbadvpn()
 {
@@ -103,18 +95,16 @@ ID="$BOTID"
 Usuario="$MYUSERNAME"
 Nombre="$MYFIRSTNAME"
 udp="$(udp)"
+hys="$(hys)"
 statusbadvpn="$(statusbadvpn)"
 mine_port="$(mine_port)"
 (echo "
-𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 ! $Nombre
-
-Tu Usuario: @$Usuario
-
-Tu ID: $ID
+𝙱𝚒𝚎𝚗𝚟𝚎𝚗𝚒𝚍𝚘 al Menu BOT [VPS-MOD]
 
 ======🚫 Tus comandos Disponibles [VPS-MOD]🚫=========
  👤 SSH Generadas [$SSH]
  👉$udp
+ 👉$hys
  👉$statusbadvpn
  👉$mine_port
 
